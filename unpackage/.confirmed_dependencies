@@ -1,0 +1,66 @@
+{
+	"index.html": {
+		"refer": [
+			"index-menu.html",
+			"examples/guide.html",
+			"examples/badges.html",
+			"examples/media-list.html",
+			"examples/setting.html",
+			"examples/login.html",
+			"examples/beecloud.html",
+			"examples/im-chat.html",
+			"examples/ad.html",
+			"examples/progressbar.html",
+			"examples/accordion.html",
+			"examples/gqTest/login.html",
+			"examples/slider-table-default.html",
+			"examples/card.html",
+			"examples/locker-dom.html",
+			"examples/numbox.html",
+			"examples/lazyload-image.html",
+			"examples/feedback.html",
+			"examples/best-practices/list-to-detail/listview.html",
+			"examples/gqTest/index.html",
+			"examples/gqTest/pendingOrdersPage.html",
+			"examples/slider-table-pagination.html",
+			"examples/buttons.html",
+			"examples/ajax.html",
+			"examples/buttons-with-loading.html",
+			"examples/checkbox.html",
+			"examples/dtpicker.html",
+			"examples/date.html",
+			"examples/dialog.html",
+			"examples/slider-native.html",
+			"examples/slider-default.html",
+			"examples/slider-with-title.html",
+			"examples/grid-default.html",
+			"examples/grid-pagination.html",
+			"examples/input.html",
+			"examples/icons-extra.html",
+			"examples/icons.html",
+			"examples/tableviews-with-badges.html",
+			"examples/tableviews.html",
+			"examples/nav.html"
+		]
+	},
+	"index-menu.html": {
+		"refer": [
+			"examples/pullrefresh_main.html",
+			"examples/switches.html",
+			"examples/tableviews-with-swipe.html"
+		]
+	},
+	"examples/pullrefresh_main.html": {
+		"resources": [
+			"examples/pullrefresh_sub.html"
+		],
+		"refer": [
+			"examples/pullrefresh_sub.html"
+		]
+	},
+	"examples/best-practices/list-to-detail/listview.html": {
+		"refer": [
+			"examples/best-practices/list-to-detail/detail.html"
+		]
+	}
+}

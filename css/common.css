@@ -1,0 +1,18 @@
+body,.mui-content{
+	background-color: #ffffff;
+}
+[v-cloak]{
+    display: none
+}
+.m_t_15{
+ margin-top: 15px;
+}
+.m_b_10{
+	margin-bottom: 10px;
+}
+.f-15{
+	font-size: 15px!important;
+}
+.f_18{
+	font-size: 12px;
+}

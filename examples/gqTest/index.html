@@ -1,0 +1,169 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/common.css" rel="stylesheet" />
+		<style>
+			.i_header{
+				padding: 10px 15px;
+				height: 80px;
+				display: flex;
+				justify-content: space-between;
+			}
+			.i_header_left,.i_header_right {
+				height: 100%;
+			}
+			.i_header_left{
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+			}
+			.i_header_right{
+				display: flex;
+				justify-content: space-between;
+			}
+			.i_longOut{
+				margin-left: 20px;
+			}
+			/*列表部分*/
+			.i_content{
+				padding: 40px 15px;
+			}
+			.i_showList_f_1,.i_showList_f_2,.i_showList_s_1,.i_showList_s_2{
+				display: flex;
+				justify-content: space-between;
+			}
+			.i_showList_f_2{
+				margin-top: 20px;
+			}
+			.i_showList_item{
+				width: 80px;
+				height: 80px;
+				background-color: red;
+				text-align: center;
+				line-height: 40px;
+			}
+			
+			.i_showList_s{
+				margin-top: 40px;
+			}
+			.i_showList_s_2{
+				margin-top: 30px;
+			}
+			.i_showList_s_item{
+				text-align: center;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+			<h1 class="mui-title">首页</h1>
+		</header>
+		<div class="mui-content" id="i_app" v-cloak>
+			<div class="i_header">
+				<div class="i_header_left">
+				   <div>
+				   	 <span>张三</span>
+				   	 <span>维修工</span>
+				   </div>
+				   <div>
+				   	菱菱邦养护中心富阳店
+				   </div>
+				</div>
+				<div class="i_header_right">
+					<div >
+						修改密码
+					</div>
+					<div class="i_longOut">
+						退出登录
+					</div>
+				</div>
+			</div>
+			<div class="i_content">
+				<div class="i_showList_f">
+					<div class="i_showList_f_1">
+						<div class="i_showList_item">
+							<div>待开单</div>
+							<div><span>{{list1.daikaidan}}</span>台</div>
+						</div>
+						<div class="i_showList_item">
+							<div>待结算</div>
+							<div><span>{{list1.daijiesuan}}</span>台</div>
+						</div>
+						<div class="i_showList_item">
+							<div>已超时</div>
+							<div><span>{{list1.yichaoshi}}</span>台</div>
+						</div>
+					</div>
+					<div class="i_showList_f_2">
+						<div class="i_showList_item">
+							<div>维修中</div>
+							<div><span>{{list1.weixiuzhong}}</span>台</div>
+						</div>
+						<div class="i_showList_item">
+							<div>已结算</div>
+							<div><span>{{list1.yijiesuan}}</span>台</div>
+						</div>
+						<div class="i_showList_item">
+							<div>已作废</div>
+							<div><span>{{list1.yizuofei}}</span>台</div>
+						</div>
+					</div>
+				</div>
+				<div class="i_showList_s">
+					<div class="i_showList_s_1">
+						<div class="i_showList_s_item">
+							<img src="../../images/60x60.gif"/>
+							<div class="f_18">识牌接车</div>
+						</div>
+						<div class="i_showList_s_item">
+							<img src="../../images/60x60.gif"/>
+							<div class="f_18">保有客查询</div>
+						</div>
+					</div>
+					<div class="i_showList_s_2">
+						<div class="i_showList_s_item">
+							<img src="../../images/60x60.gif"/>
+							<div class="f_18">客户档案</div>
+						</div>
+						<div class="i_showList_s_item">
+							<img src="../../images/60x60.gif"/>
+							<div class="f_18">配件查询</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/vue.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			new Vue({
+				el:'#i_app',
+				data(){
+					return {
+						list1:{
+							daikaidan:24,
+							daijiesuan:25,
+							yichaoshi:26,
+							weixiuzhong:27,
+							yijiesuan:28,
+							yizuofei:29,
+							
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

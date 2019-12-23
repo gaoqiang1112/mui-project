@@ -1,0 +1,139 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/common.css" rel="stylesheet" />
+		<style>
+			.mui-search .mui-placeholder{
+				text-align: left!important;
+				padding-left: 15px;
+				font-size: 13px!important;
+			}
+			.mui-content{
+				padding: 0 15px;
+			}
+			.pop_searchHeader{
+				display: flex;
+				justify-content: space-between;
+			}
+			.pop_searchHeader_l{
+				flex-grow: 1;
+			}
+			.pop_searchHeader_r{
+				flex-grow: 0;
+				height: 64px;
+				line-height: 64px;
+				margin-left: 10px;
+				display: flex;
+				align-items: center;
+			}
+			.pop_searchInput{
+				border-radius: 18px!important;
+			}
+			.mui-card{
+				margin: inherit;
+			}
+			.pop_card_title{
+				text-align: center;
+			}
+			.pop_card_line{
+				height: 1px;
+				margin-top: 10px;
+				background: #000000;
+			}
+			.pop_card_content{
+				padding: 10px;
+			}
+			.pop_card_content_item{
+				display: flex;
+				justify-content: space-between;
+			}
+			.pop_card_footer{
+				text-align: right;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<button class="mui-action-back mui-btn mui-btn-blue mui-btn-link mui-btn-nav mui-pull-left">
+				<span class="mui-icon mui-icon-left-nav"></span>
+				返回
+			</button>
+			<h1 class="mui-title">待开单列表</h1>
+		</header>
+		<div class="mui-content" id="pop_app" v-cloak>
+			<div class="pop_searchHeader">
+				<div class="mui-input-row mui-search m_t_15 pop_searchHeader_l">
+					<input type="search" class="mui-input-clear pop_searchInput" placeholder="请输入姓名、手机、车牌、VIN">
+				</div>
+				<div class="pop_searchHeader_r">
+					<span style="white-space: nowrap;">搜索</span>
+					<img src="../../images/logo.png" width="20px" height="20px" style="margin-left: 10px;" />
+				</div>
+			</div>
+			<div class="mui-card">
+				<div class="mui-card-content">
+					<div class="mui-card-content-inner">
+						<div class="pop_card_title">
+							奥迪Q5L 2018款	
+						</div>
+						<div class="pop_card_line"></div>
+						<div class="pop_card_content">
+							<div class="pop_card_content_item m_b_10">
+								<div class="pop_card_content_item_l">车主:</div>
+								<div class="pop_card_content_item_r">{{cardInfo.username}}</div>
+							</div>
+							<div class="pop_card_content_item m_b_10">
+								<div class="pop_card_content_item_l">手机:</div>
+								<div class="pop_card_content_item_r">{{cardInfo.telNo}}</div>
+							</div>
+							<div class="pop_card_content_item m_b_10">
+								<div class="pop_card_content_item_l">车牌:</div>
+								<div class="pop_card_content_item_r">{{cardInfo.licensePlate}}</div>
+							</div>
+							<div class="pop_card_content_item m_b_10">
+								<div class="pop_card_content_item_l">VIN:</div>
+								<div class="pop_card_content_item_r">{{cardInfo.vin}}</div>
+							</div>
+							<div class="pop_card_content_item m_b_10">
+								<div class="pop_card_content_item_l">来源:</div>
+								<div class="pop_card_content_item_r">{{cardInfo.comeFrom}}</div>
+							</div>
+							<div class="pop_card_footer">
+								<button type="button" class="mui-btn mui-btn-primary">立即开单</button>
+							</div>
+						</div>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script src="../../js/vue.min.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			new Vue({
+				el:'#pop_app',
+				data(){
+					return {
+						cardInfo:{
+							username:'张三丰',
+							telNo:13266668888,
+							licensePlate:'浙A 12345',
+							vin:'L123123123123123',
+							comeFrom:'识别成功的非保有客'
+						}
+					}
+				}
+			})
+		</script>
+	</body>
+
+</html>

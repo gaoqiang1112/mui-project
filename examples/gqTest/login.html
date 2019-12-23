@@ -1,0 +1,96 @@
+<!doctype html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+		<link href="../../css/mui.min.css" rel="stylesheet" />
+		<link href="../../css/common.css" rel="stylesheet" />
+		<style>
+			.l_logo{
+				height: 150px;
+				width: 150px;
+				border-radius: 50%;
+				margin: 0 auto;
+				margin-top: 80px;
+				background-color: blue;
+				overflow: hidden;
+			}
+			.l_appName{
+				margin-top: 25px;
+				text-align: center;
+			}
+			.l_content{
+				padding: 0 25px;
+			}
+			.l_input{
+				outline: none!important;
+				border: none!important;
+				border-bottom: 1px solid #000000!important;
+				padding-left: 0px!important;
+				padding-right: 0px!important;
+				border-radius: 0!important;
+			}
+			.l_remember_ckb{
+				left: 0!important;
+			}
+			.l_remember_txt{
+				padding-left: 38px!important;
+			}
+			.l_button{
+				margin-top: 50px;
+				width: 100%;
+				border-radius: 15px;
+				display: flex;
+				justify-content: space-around;
+			}
+		</style>
+	</head>
+
+	<body>
+		<header class="mui-bar mui-bar-nav">
+			<!--<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>-->
+			<h1 class="mui-title">登录</h1>
+		</header>
+		<div class="mui-content">
+			<div class="l_logo">
+				<img src="../../images/shuijiao.jpg" width="100%" height="100%"/>
+			</div>
+			<div id="" class="l_appName">
+				<!--五菱县网管理系统-->
+			</div>
+			<div class="l_content">
+				<input type="text" class="l_input" id="username" placeholder="请输入登录账号" value="admin"/>
+				<input type="password" class="l_input" id="password" placeholder="请输入登录密码" value="111111"/>
+				<div class="mui-input-row mui-checkbox mui-left">
+				  <label class="l_remember_txt">记住密码</label>
+				  <input name="checkbox1" class="l_remember_ckb" value="Item 1" type="checkbox" checked>
+				</div>
+				<button type="button"  class="mui-btn mui-btn-primary l_button" onclick="loginOn()">
+					<span id="">
+						登
+					</span>
+					<span id="">
+						录
+					</span>
+				</button>
+			</div>
+		</div>
+		
+		<script src="../../js/mui.min.js"></script>
+		<script src="../../js/config.js"></script>
+		<script type="text/javascript">
+			mui.init()
+			function loginOn(){
+				mui.post(cApi.baseUrl+iApi['loginOn'],{
+					username:uApi.qs("#username").value,
+					password:uApi.qs('#password').value
+				},function(data){
+					console.info(data)
+				})
+			}
+		</script>
+	</body>
+
+</html>
